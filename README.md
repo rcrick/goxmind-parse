@@ -3,12 +3,15 @@
 - [Parse new version xmind](#parse-new-version-xmind)
 
 ## Parse old version xmind
-```bigquery
+![title](images/old.png)
+### example
+```golang
 f := "xmindold/xmind_old.xmind"
 tree := v1.Parse(f)
 empJSON, _ := json.MarshalIndent(tree, "", "  ")
 fmt.Printf("MarshalIndent funnction output \n%s\n", string(empJSON))
 ```
+### output
 ```bigquery
 MarshalIndent funnction output 
 {
@@ -63,12 +66,15 @@ MarshalIndent funnction output
 ```
 
 ## Parse new version xmind
-```bigquery
+![title](images/new.png)
+### example
+```golang
 f := "xmindnew/xmindnew.xmind"
 tree := v2.Parse(f)
 empJSON, _ := json.MarshalIndent(tree, "", "  ")
 fmt.Printf("MarshalIndent funnction output \n%s\n", string(empJSON))
 ```
+### output
 ```bigquery
 [
   {
