@@ -12,7 +12,7 @@ empJSON, _ := json.MarshalIndent(tree, "", "  ")
 fmt.Printf("MarshalIndent funnction output \n%s\n", string(empJSON))
 ```
 ### output
-```bigquery
+```json
 MarshalIndent funnction output 
 {
   "XMLName": {
@@ -45,7 +45,20 @@ MarshalIndent funnction output
           "Note": "child1beizhu",
           "Label": "child1label",
           "Html": "",
-          "Children": null
+          "Children": [
+            {
+              "XMLName": {
+                "Space": "urn:xmind:xmap:xmlns:content:2.0",
+                "Local": "topic"
+              },
+              "ID": "7e83o4t5gtf6m402b8ducsltou",
+              "Name": "child1-child",
+              "Note": "",
+              "Label": "",
+              "Html": "",
+              "Children": null
+            }
+          ]
         },
         {
           "XMLName": {
@@ -63,6 +76,7 @@ MarshalIndent funnction output
     }
   }
 }
+
 ```
 
 ## Parse new version xmind
@@ -75,7 +89,7 @@ empJSON, _ := json.MarshalIndent(tree, "", "  ")
 fmt.Printf("MarshalIndent funnction output \n%s\n", string(empJSON))
 ```
 ### output
-```bigquery
+```json
 [
   {
     "id": "fbcb9e4ec339a9efe589c81a5c",
@@ -158,5 +172,4 @@ fmt.Printf("MarshalIndent funnction output \n%s\n", string(empJSON))
     "topicPositioning": "fixed"
   }
 ]
-
 ```
